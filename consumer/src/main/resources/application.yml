@@ -1,4 +1,6 @@
 eureka:
+  instance:
+    instance-id: consumer
   client:
     fetch-registry: true
     register-with-eureka: true
