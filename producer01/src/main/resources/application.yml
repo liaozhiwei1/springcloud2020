@@ -1,0 +1,12 @@
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost1:7000/eureka,http://localhost2:7001/eureka,http://localhost3:7002/eureka
+server:
+  port: 8000
+spring:
+  application:
+    name: producer
