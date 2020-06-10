@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/eureka02/eureka02.iml" filepath="$PROJECT_DIR$/eureka02/eureka02.iml" />
       <module fileurl="file://$PROJECT_DIR$/producer01/producer.iml" filepath="$PROJECT_DIR$/producer01/producer.iml" />
       <module fileurl="file://$PROJECT_DIR$/producer02/producer02.iml" filepath="$PROJECT_DIR$/producer02/producer02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/producer03/producer03.iml" filepath="$PROJECT_DIR$/producer03/producer03.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud2020.iml" filepath="$PROJECT_DIR$/springcloud2020.iml" />
     </modules>
   </component>

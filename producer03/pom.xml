@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.lzw</groupId>
-    <artifactId>producer01</artifactId>
+    <artifactId>producer03</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -110,16 +110,17 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-statsd</artifactId>
         </dependency>
 
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
+
 
         <dependency>
             <groupId>commons-codec</groupId>
@@ -128,10 +129,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>2.1.0.RELEASE</version>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
     </dependencies>
-
-
 </project>
