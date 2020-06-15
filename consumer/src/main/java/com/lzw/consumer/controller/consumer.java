@@ -1,5 +1,6 @@
 package com.lzw.consumer.controller;
 
+import com.lzw.consumer.feign.Feign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,9 +20,13 @@ public class consumer {
 
     private String url = "http://PRODUCER/cloudtest/ok";
 
+    @Autowired
+    private Feign feign;
+
     @GetMapping("test")
-    public String test(){
-        return restTemplate.getForObject(url,String.class);
+    public String test() {
+        return feign.test();
     }
+
 
 }

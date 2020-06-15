@@ -11,3 +11,9 @@ server:
 spring:
   application:
     name: consumer
+#ribbon:
+#  ConnectTimeout: 2000
+#  ReadTimeout: 2000
+logging:
+  level:
+    com.lzw.consumer.feign.Feign: debug

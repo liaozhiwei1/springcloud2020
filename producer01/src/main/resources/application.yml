@@ -1,4 +1,3 @@
-
 eureka:
   client:
     fetch-registry: true
@@ -13,3 +12,6 @@ server:
 spring:
   application:
     name: producer
+logging:
+  level:
+    com.lzw.springcloud: debug

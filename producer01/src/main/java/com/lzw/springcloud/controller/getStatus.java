@@ -1,5 +1,11 @@
 package com.lzw.springcloud.controller;
 
+import com.lzw.springcloud.Fallback.DefaultFallBack;
+import com.lzw.springcloud.server.TestServer;
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -9,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @version: 1.0
@@ -18,6 +25,9 @@ import java.util.List;
  **/
 @RestController
 @RequestMapping("/cloudtest")
+@DefaultProperties(defaultFallback = "fallBack",commandProperties = {
+        @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "3000")
+})
 public class getStatus {
 
     @Value("${server.port}")
@@ -25,22 +35,34 @@ public class getStatus {
 
     @Resource
     private DiscoveryClient discoveryClient;
+
+    @Autowired
+    private TestServer testServer;
+
+    @Autowired
+    private DefaultFallBack defaultFallBack;
+
     @GetMapping("/ok")
+    @HystrixCommand
     public String test(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "ok"+port;
     }
 
     @GetMapping("/get")
+//    @HystrixCommand(fallbackMethod = "fallBack",commandProperties = {
+//            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "3000")
+//    })
+    @HystrixCommand
     public String getPort(){
-        List<String> services = discoveryClient.getServices();
-        List<ServiceInstance> instances = discoveryClient.getInstances("PRODUCER");
-        StringBuffer stringBuffer = new StringBuffer();
-        for (ServiceInstance s :
-                instances) {
-            String host = s.getHost();
-            String s1 = s.getUri().toString();
-            stringBuffer.append(host+"****").append(s1);
-        }
-        return stringBuffer.toString();
+        return testServer.getPort();
+    }
+
+    public String fallBack(){
+        return defaultFallBack.defaultFallBack();
     }
 }
