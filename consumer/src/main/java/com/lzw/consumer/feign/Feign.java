@@ -3,6 +3,8 @@ package com.lzw.consumer.feign;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * @version: 1.0
@@ -17,7 +19,6 @@ public interface Feign {
     @GetMapping("/cloudtest/get")
     String getPort();
 
-    @GetMapping("/cloudtest/ok")
-    String test();
-
+    @PostMapping("/cloudtest/ok")
+    String test(@RequestBody int x);
 }

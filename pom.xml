@@ -17,6 +17,8 @@
         <module>producer02</module>
         <module>producer03</module>
         <module>producer04</module>
+        <module>hystrix-dashbord</module>
+        <module>gateway</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

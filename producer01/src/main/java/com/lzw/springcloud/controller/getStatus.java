@@ -2,19 +2,12 @@ package com.lzw.springcloud.controller;
 
 import com.lzw.springcloud.Fallback.DefaultFallBack;
 import com.lzw.springcloud.server.TestServer;
-import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -25,9 +18,6 @@ import java.util.concurrent.TimeUnit;
  **/
 @RestController
 @RequestMapping("/cloudtest")
-@DefaultProperties(defaultFallback = "fallBack",commandProperties = {
-        @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "3000")
-})
 public class getStatus {
 
     @Value("${server.port}")
@@ -42,11 +32,10 @@ public class getStatus {
     @Autowired
     private DefaultFallBack defaultFallBack;
 
-    @GetMapping("/ok")
-    @HystrixCommand
-    public String test(){
+    @PostMapping("/ok")
+    public String test(@RequestBody int x){
         try {
-            TimeUnit.SECONDS.sleep(3);
+            TimeUnit.MILLISECONDS.sleep(x);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -57,7 +46,6 @@ public class getStatus {
 //    @HystrixCommand(fallbackMethod = "fallBack",commandProperties = {
 //            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "3000")
 //    })
-    @HystrixCommand
     public String getPort(){
         return testServer.getPort();
     }

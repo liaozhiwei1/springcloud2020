@@ -6,9 +6,12 @@
       <module fileurl="file://$PROJECT_DIR$/eureka00/eureka00.iml" filepath="$PROJECT_DIR$/eureka00/eureka00.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka01/eureka01.iml" filepath="$PROJECT_DIR$/eureka01/eureka01.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka02/eureka02.iml" filepath="$PROJECT_DIR$/eureka02/eureka02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix-dashboard/hystrix-dashboard.iml" filepath="$PROJECT_DIR$/hystrix-dashboard/hystrix-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/producer01/producer.iml" filepath="$PROJECT_DIR$/producer01/producer.iml" />
       <module fileurl="file://$PROJECT_DIR$/producer02/producer02.iml" filepath="$PROJECT_DIR$/producer02/producer02.iml" />
       <module fileurl="file://$PROJECT_DIR$/producer03/producer03.iml" filepath="$PROJECT_DIR$/producer03/producer03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/producer04/producer04.iml" filepath="$PROJECT_DIR$/producer04/producer04.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud2020.iml" filepath="$PROJECT_DIR$/springcloud2020.iml" />
     </modules>
   </component>

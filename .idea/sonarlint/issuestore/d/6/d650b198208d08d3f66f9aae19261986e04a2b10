@@ -1,0 +1,8 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(İ‘ÿÿÿÿÿ
+r
+java:S1128"]Remove this unused import 'org.springframework.cloud.client.discovery.EnableDiscoveryClient'.(¬Ç­D
+W
+java:S1854%"<Remove this useless assignment to local variable "services".(ÂŞóòùÿÿÿÿ
+H
+java:S1481%"-Remove this unused "services" local variable.(ÂŞóòùÿÿÿÿ
