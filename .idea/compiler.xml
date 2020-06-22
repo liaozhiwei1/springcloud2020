@@ -13,7 +13,6 @@
         <module name="eureka02" />
         <module name="gateway" />
         <module name="hystrix-dashboard" />
-        <module name="producer" />
         <module name="producer01" />
         <module name="producer02" />
         <module name="producer03" />
@@ -27,7 +26,7 @@
       <module name="eureka02" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="hystrix-dashboard" target="1.8" />
-      <module name="producer" target="1.8" />
+      <module name="producer01" target="1.8" />
       <module name="producer02" target="1.8" />
       <module name="producer03" target="1.8" />
       <module name="producer04" target="1.8" />
@@ -42,7 +41,7 @@
       <module name="eureka02" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="hystrix-dashboard" options="-parameters" />
-      <module name="producer" options="-parameters" />
+      <module name="producer01" options="-parameters" />
       <module name="producer02" options="-parameters" />
       <module name="producer03" options="-parameters" />
       <module name="producer04" options="-parameters" />
