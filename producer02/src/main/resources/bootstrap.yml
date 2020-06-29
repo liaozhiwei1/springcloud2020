@@ -1,4 +1,3 @@
-
 eureka:
   client:
     fetch-registry: true
@@ -13,3 +12,19 @@ server:
 spring:
   application:
     name: producer
+  cloud:
+    config:
+      label: master
+      uri: http://127.0.0.1:9527
+      profile: test
+      name: application
+  rabbitmq:
+    host: 10.88.27.189
+    username: admin
+    password: admin
+    port: 5672
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

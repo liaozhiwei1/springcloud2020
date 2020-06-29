@@ -5,6 +5,7 @@ import com.lzw.springcloud.server.TestServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -18,10 +19,14 @@ import java.util.concurrent.TimeUnit;
  **/
 @RestController
 @RequestMapping("/cloudtest")
+@RefreshScope
 public class getStatus {
 
     @Value("${server.port}")
     private String port;
+
+    @Value("${a.b}")
+    private String a;
 
     @Resource
     private DiscoveryClient discoveryClient;
@@ -39,7 +44,7 @@ public class getStatus {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return "ok"+port;
+        return "ok"+port+"   "+a;
     }
 
     @GetMapping("/get")

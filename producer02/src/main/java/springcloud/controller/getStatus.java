@@ -3,13 +3,12 @@ package springcloud.controller;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @version: 1.0
@@ -19,6 +18,7 @@ import java.util.List;
  **/
 @RestController
 @RequestMapping("/cloudtest")
+@RefreshScope
 public class getStatus {
 
     @Resource
@@ -27,9 +27,17 @@ public class getStatus {
     @Value("${server.port}")
     private String port;
 
-    @GetMapping("/ok")
-    public String test(){
-        return "ok"+port;
+    @Value("${a.b}")
+    private String a;
+
+    @PostMapping("/ok")
+    public String test(@RequestBody int x){
+        try {
+            TimeUnit.MILLISECONDS.sleep(x);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "ok"+port+"   "+a;
     }
 
     @GetMapping("/get")

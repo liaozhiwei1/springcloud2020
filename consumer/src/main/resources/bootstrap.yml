@@ -11,6 +11,16 @@ server:
 spring:
   application:
     name: consumer
+  cloud:
+    config:
+      label: master
+      uri: http://127.0.0.1:9527
+      profile: test
+  rabbitmq:
+    host: 10.88.27.189
+    username: admin
+    password: admin
+    port: 5672
 ribbon:
   ConnectTimeout: 5000
   ReadTimeout: 5000
@@ -20,3 +30,8 @@ logging:
 feign:
   hystrix:
     enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

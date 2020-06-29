@@ -1,0 +1,31 @@
+eureka:
+  instance:
+    instance-id: config
+  client:
+    fetch-registry: true  #是否从eureka拉取注册表?
+    register-with-eureka: true  #是否注册进eureka?
+    service-url:
+      defaultZone: http://localhost1:7000/eureka,http://localhost2:7001/eureka,http://localhost3:7002/eureka
+server:
+  port: 9527
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liaozhiwei1/springConfig.git
+          username: liaozhiwei1
+          password: liao19961229
+      label: master
+  application:
+    name: config
+  rabbitmq:
+    host: 10.88.27.189
+    username: admin
+    password: admin
+    port: 5672
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

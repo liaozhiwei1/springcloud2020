@@ -3,9 +3,9 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="bootstrap_spring_boot_com.lzw.consumer.consumerApplication" profiles="cloud" autodetected="true" />
-        <fileset id="spring-boot-dispatcherServletAutoConfiguration-mvc" profiles="cloud" autodetected="true" />
-        <fileset id="spring_boot_com.lzw.consumer.consumerApplication" profiles="cloud" autodetected="true" />
+        <fileset id="bootstrap_spring_boot_com.lzw.consumer.consumerApplication" profiles="git" autodetected="true" />
+        <fileset id="spring-boot-dispatcherServletAutoConfiguration-mvc" profiles="git" autodetected="true" />
+        <fileset id="spring_boot_com.lzw.consumer.consumerApplication" profiles="git" autodetected="true" />
       </configuration>
     </facet>
     <facet type="web" name="Web">
@@ -24,12 +24,28 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-bus-amqp:2.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-stream-rabbit:3.0.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-stream-binder-rabbit:3.0.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-stream-binder-rabbit-core:3.0.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.integration:spring-integration-amqp:5.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.rabbitmq:http-client:2.1.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-amqp:2.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.amqp:spring-rabbit:2.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:5.7.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.amqp:spring-amqp:2.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.integration:spring-integration-jmx:5.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-bus:2.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-stream:3.0.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-messaging:5.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-function-context:3.0.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-function-core:3.0.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.integration:spring-integration-core:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5.11" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.11" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.13" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.2.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.10.1" level="project" />
@@ -214,5 +230,8 @@
     <orderEntry type="library" name="Maven: com.google.guava:guava:15.0" level="project" />
     <orderEntry type="library" name="Maven: io.reactivex:rxjava-reactive-streams:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-config:2.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-config-client:2.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.1" level="project" />
   </component>
 </module>
