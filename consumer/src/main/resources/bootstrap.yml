@@ -1,21 +1,28 @@
-eureka:
-  instance:
-    instance-id: consumer
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost1:7000/eureka,http://localhost2:7001/eureka,http://localhost3:7002/eureka
+#eureka:
+#  instance:
+#    instance-id: consumer
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost1:7000/eureka,http://localhost2:7001/eureka,http://localhost3:7002/eureka
 server:
   port: 8080
 spring:
   application:
     name: consumer
   cloud:
-    config:
-      label: master
-      uri: http://127.0.0.1:9527
-      profile: test
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        service: nacos-consumer
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: application
+#    config:
+#      label: master
+#      uri: http://127.0.0.1:9527
+#      profile: test
   rabbitmq:
     host: 10.88.27.189
     username: admin
@@ -27,6 +34,7 @@ ribbon:
 logging:
   level:
     com.lzw.consumer.feign.Feign: debug
+    com.alibab.nacos.client: warn
 feign:
   hystrix:
     enabled: true

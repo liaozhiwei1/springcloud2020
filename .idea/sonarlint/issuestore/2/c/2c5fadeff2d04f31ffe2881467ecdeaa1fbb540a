@@ -1,9 +1,9 @@
 
-^
-java:S1854"<Remove this useless assignment to local variable "services".(ÂŞóòùÿÿÿÿ8ëÑ³·ª.
-c
-java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Å©´·ª.
 O
 java:S1481"-Remove this unused "services" local variable.(ÂŞóòùÿÿÿÿ8ëÑ³·ª.
 E
 java:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Å©´·ª.
+c
+java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Å©´·ª.
+^
+java:S1854"<Remove this useless assignment to local variable "services".(ÂŞóòùÿÿÿÿ8ëÑ³·ª.

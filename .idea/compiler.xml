@@ -7,12 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="config" />
         <module name="consumer" />
+        <module name="consumer-alibaba" />
         <module name="eureka00" />
         <module name="eureka01" />
         <module name="eureka02" />
         <module name="gateway" />
         <module name="hystrix-dashboard" />
+        <module name="producer" />
         <module name="producer01" />
         <module name="producer02" />
         <module name="producer03" />
@@ -20,12 +23,15 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="config" target="1.8" />
       <module name="consumer" target="1.8" />
+      <module name="consumer-alibaba" target="1.8" />
       <module name="eureka00" target="1.8" />
       <module name="eureka01" target="1.8" />
       <module name="eureka02" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="hystrix-dashboard" target="1.8" />
+      <module name="producer" target="1.8" />
       <module name="producer01" target="1.8" />
       <module name="producer02" target="1.8" />
       <module name="producer03" target="1.8" />
@@ -35,12 +41,15 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config" options="-parameters" />
       <module name="consumer" options="-parameters" />
+      <module name="consumer-alibaba" options="-parameters" />
       <module name="eureka00" options="-parameters" />
       <module name="eureka01" options="-parameters" />
       <module name="eureka02" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="hystrix-dashboard" options="-parameters" />
+      <module name="producer" options="-parameters" />
       <module name="producer01" options="-parameters" />
       <module name="producer02" options="-parameters" />
       <module name="producer03" options="-parameters" />

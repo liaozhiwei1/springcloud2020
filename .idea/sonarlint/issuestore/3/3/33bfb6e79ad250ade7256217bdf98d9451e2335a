@@ -1,4 +1,8 @@
 
-i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(›‡â´8½´’ª.
 D
-java:S1068"'Remove this unused "url" private field.(ÎÌ»Ö8½´’ª.
+java:S1068"'Remove this unused "url" private field.(ÎÌ»Ö8½´’ª.
+C
+java:S1172-"&Remove these unused method parameters.(µÍğœ8êâ¬.
+`
+java:S1128"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë8ÎÜ’á¬.
+g	java:S112;"FDefine and throw a dedicated exception instead of using a generic one.(Åš‰—şÿÿÿÿ8¹’Ñ¬.

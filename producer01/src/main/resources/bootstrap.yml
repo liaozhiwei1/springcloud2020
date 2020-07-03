@@ -1,23 +1,32 @@
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost1:7000/eureka,http://localhost2:7001/eureka,http://localhost3:7002/eureka
-  instance:
-    instance-id: producer01
-    prefer-ip-address: true
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost1:7000/eureka,http://localhost2:7001/eureka,http://localhost3:7002/eureka
+#  instance:
+#    instance-id: producer01
+#    prefer-ip-address: true
 server:
   port: 8000
 spring:
+  profiles:
+    active: dev
   application:
     name: producer
   cloud:
-    config:
-      label: master
-      uri: http://127.0.0.1:9527
-      profile: test
-      name: application
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        service: nacos-producer
+      config:
+        prefix: application
+        server-addr: 127.0.0.1:8848
+#    config:
+#      label: master
+#      uri: http://127.0.0.1:9527
+#      profile: test
+#      name: application
   rabbitmq:
     host: 10.88.27.189
     username: admin

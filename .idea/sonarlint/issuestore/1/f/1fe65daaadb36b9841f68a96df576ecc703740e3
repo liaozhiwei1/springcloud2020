@@ -1,8 +1,11 @@
 
-n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(İ‘ÿÿÿÿÿ8ùï¯’ª.
 y
 java:S1128"]Remove this unused import 'org.springframework.cloud.client.discovery.EnableDiscoveryClient'.(¬Ç­D8ùï¯’ª.
-^
-java:S1854%"<Remove this useless assignment to local variable "services".(ÂŞóòùÿÿÿÿ8ùï¯’ª.
 O
-java:S1481%"-Remove this unused "services" local variable.(ÂŞóòùÿÿÿÿ8ùï¯’ª.
+java:S1481,"-Remove this unused "services" local variable.(ÂŞóòùÿÿÿÿ8ùï¯’ª.
+^
+java:S1854,"<Remove this useless assignment to local variable "services".(ÂŞóòùÿÿÿÿ8ùï¯’ª.
+E
+java:S1148%"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8óüÀö¯.
+c
+java:S2142$"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8óüÀö¯.

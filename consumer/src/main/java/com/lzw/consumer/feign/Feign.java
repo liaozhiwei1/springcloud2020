@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @create: 2020-06-11 15:04:21
  **/
 @Component
-@FeignClient(value = "PRODUCER")
+@FeignClient(value = "nacos-producer")
 public interface Feign {
 
     @GetMapping("/cloudtest/get")
